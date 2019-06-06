@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clubs</title>
+    <link rel="stylesheet" href="clibsPage.css" />
+    <!-------------material design links ---------------------------------------------------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!------------------------bootstrap links ------------------------------------------------>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!------------------------------jquery bootstrap---------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+</head>
+<body >
+<div  class="mdl-layout mdl-js-layout mdl-layout--fixed-header  mdl-layout__header--scroll">
+    <header ng-controller="menuBarCtrl" class="header mdl-layout__header mdl-layout--header--scroll">
+        <div class="header mdl-layout__header-row">
+            <!-- Title -->
+            <img src="images\logo.png" class="logo-img">
+            <div style="border: none;" class="mdl-layout--large-screen-only back-button-container align-middle">
+                <div class="btn-group dropleft">
+                    <button id="dropLeftBtn" type="button" class="main-btn btn btn-secondary dropdown-toggle " data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">
+                        Go back to club
+                    </button>
+                    <div class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                    </div>
+                </div>
+            </div>
+            <div class="mdl-layout-spacer mdl-layout--large-screen-only"></div>
+            <nav class=" mt-2 mb-2 mdl-navigation ">
+                <div class="mr-3 mdl-badge mdl-badge--overlap mdl-layout--large-screen-only" data-badge="{{profile.notifications}}">
+                    <img style="height: 35px; width: 35px;" src="images/summary-full-icon.png">
+                </div>
+                <div class="user-envelope btn-group dropup">
+                    <div style="width: 200px;" class="btn btn-secondary dropdown-toggle-split">
+                        <img style="float: left" class="align-middle" src="images/{{profile.photo}}.png">
+                        <p style="float: right;">{{profile.name}}<br><span>Club: {{profile.club}}</span></p>
+                    </div>
+                    <button style="width: 100px" type="" class="mdl-layout--large-screen-only btn btn-secondary  dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <i class="material-icons">
+                            keyboard_arrow_up
+                        </i>
+                    </button>
+                    <div  class="dropdown-menu ">
+                        <ui-view name='menuBarView'>
+                    </div>
+                </div>
+                <div class="mdl-layout--large-screen-only balance-box">
+                    <p>balance<br>
+                        <span><img src="images/coin-ikon.png">
+                            {{profile.balance}}
+                        </span></p>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer mdl-layout--small-screen-only ">
+        <span class="mdl-layout-title">Menu</span>
+        <nav  class="mdl-navigation ">
+            <ui-view name='menuBarView'></ui-view>
+        </nav>
+    </div>
+    <ui-view name="screenView">
+    </ui-view>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<!-----<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.min.js"></script>-------->
+<script src="js/angular-ui-router.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

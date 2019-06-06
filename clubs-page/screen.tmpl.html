@@ -1,0 +1,129 @@
+<div ng-controller="screenCtrl" >
+    <!------------------------join club slider --------------------------------------------->
+    <div class="pt-3 mx-auto mdl-grid choose-club-carousel" >
+        <a class="mdl-layout--large-screen-only" ng-click="goPrev(currentRedButton,'redButton')">
+            <object  class=" prev" data="images/slider-chevron-previous.svg" type="image/svg+xml">
+                <img src="images/greenDot.png" />
+            </object>
+        </a>
+        <div class="mdl-cell content">
+            <div>
+                <p class="main-title ">Join up with your favorite<br>streamer or E-sport team!</p>
+                    <img class="mdl-layout--large-screen-only" ng-if="equal(currentRedButton.id,0)" src="images/copy-1.png" >
+                    <img class="mdl-layout--large-screen-only" ng-if="equal(currentRedButton.id,1)" src="images/copy-2.png">
+                    <img class="mdl-layout--large-screen-only" ng-if="equal(currentRedButton.id,2)" src="images/copy-3.png">
+                <p class="main-sub">More of 5000 clubs on ikon<br>currently</p>
+            </div>
+            <ul class="mdl-layout--large-screen-only" >
+                <li >
+                    <div  class="carousel-btn-bar progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </li>
+                <li ng-repeat="redButton in redButtons" >
+                    <a ng-click="goToButton(redButton.id); setCurrentRedButton(redButton)"
+                       ng-class="{'red-background-color' : isCurrentRedButton(redButton),'no-right-margin' : equal(redButton.id,2)}"
+                       class="carousel-btn dot">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <a class="mdl-layout--large-screen-only" ng-click="goNext(currentRedButton,'redButton')">
+            <object class="next" data="images/slider-chevron-next.svg" type="image/svg+xml">
+                <img src="images/greenDot.png" />
+            </object>
+        </a>
+    </div>
+    <!------------------------clubs slider---------------------------------------------------------------------->
+    <div class="mdl-grid clubs-div">
+        <nav>
+            <p id="last-season">Last season top clubs
+                <br>
+                <span>Last season top clubs</span>
+            </p>
+            <button style="float: right;" class="btn btn-outline-secondary">EXPLORE MORE</button>
+        </nav>
+        <div class=" clubs-carousel">
+            <ul style="padding-left: 0px" class="clubs">
+                <li class="mdl-layout--large-screen-only tile-list">
+                    <div style="">
+                        <a ng-click="goPrev(leftTile,'lastClubs')"><i class="arrow material-icons">
+                            keyboard_arrow_left
+                        </i></a>
+                    </div>
+                </li>
+                <li class="mdl-layout--small-screen-only tile-list">
+                    <div style="height: 5px;" >
+                        <a  ng-click="goPrev(leftTile,'lastClubs')">
+                            <i  class="arrow material-icons">
+                                keyboard_arrow_up
+                            </i>
+                        </a>
+                    </div>
+                </li>
+            <club-tile-directive></club-tile-directive>
+                <li class="mdl-layout--large-screen-only tile-list">
+                    <div style="">
+                        <a ng-click="goNext(leftTile,'lastClubs')"><i class="arrow material-icons">
+                            keyboard_arrow_right
+                        </i></a>
+                    </div>
+                </li>
+                <li class="mdl-layout--small-screen-only tile-list">
+                    <div style="height: 5px;" >
+                        <a  ng-click="goPrev(leftTile,'lastClubs')">
+                            <i style="margin-top: 10px;" class="arrow material-icons">
+                                keyboard_arrow_down
+                            </i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mdl-grid clubs-div">
+        <nav>
+            <p id="current-season">top clubs
+                <br>
+                <span>top clubs</span>
+            </p>
+            <button style="float: right;" class="btn btn-outline-secondary">EXPLORE MORE</button>
+        </nav>
+        <div class=" clubs-carousel">
+            <ul style="padding-left: 0px" class="clubs">
+                <li class="mdl-layout--large-screen-only tile-list">
+                    <div style="">
+                        <a ng-click="goPrev(leftTile2,'currentClubs')"><i class="arrow material-icons">
+                            keyboard_arrow_left
+                        </i></a>
+                    </div>
+                </li>
+                <li class="mdl-layout--small-screen-only tile-list">
+                    <div style="height: 5px;" >
+                        <a  ng-click="goPrev(leftTile2,'currentClubs')">
+                            <i  class="arrow material-icons">
+                                keyboard_arrow_up
+                            </i>
+                        </a>
+                    </div>
+                </li>
+            <club-tile-directive2></club-tile-directive2>
+                <li class="mdl-layout--large-screen-only tile-list">
+                    <div style="">
+                        <a ng-click="goNext(leftTile2,'currentClubs')"><i class="arrow material-icons">
+                            keyboard_arrow_right
+                        </i></a>
+                    </div>
+                </li>
+                <li class="mdl-layout--small-screen-only tile-list">
+                    <div style="height: 5px;" >
+                        <a  ng-click="goPrev(leftTile2,'currentClubs')">
+                            <i style="margin-top: 10px;" class="arrow material-icons">
+                                keyboard_arrow_down
+                            </i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
