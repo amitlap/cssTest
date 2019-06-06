@@ -10,11 +10,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             'menuBarView': {
                 templateUrl: '/menuBar.tmpl.html',
-                // templateUrl: 'https://github.com/amitlap/cssTest/blob/master/test1.html',
+                // templateUrl: 'https://github.com/amitlap/cssTest/edit/master/clubs-page/menuBar.tmpl.html',
                 controller: 'menuBarCtrl'
             },
             'screenView': {
                 templateUrl: "/screen.tmpl.html",
+                 // templateUrl: 'https://github.com/amitlap/cssTest/edit/master/clubs-page/screen.tmpl.html',
                 controller: 'screenCtrl'
             }
         }
@@ -273,12 +274,14 @@ app.controller('menuBarCtrl', function ($scope,$timeout) {
 app.directive("clubTileDirective", function() {
     return {
         templateUrl: '/clubCarousel.tmpl.html'
+        // templateUrl: 'https://github.com/amitlap/cssTest/edit/master/clubs-page/clubCarousel.tmpl.html',
     };
 });
 
 app.directive("clubTileDirective2", function() {
     return {
         templateUrl: '/clubCarousel2.tmpl.html'
+        // templateUrl: 'https://github.com/amitlap/cssTest/edit/master/clubs-page/clubCarousel2.tmpl.html',
     };
 });
 
