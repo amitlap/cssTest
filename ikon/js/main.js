@@ -9,8 +9,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         abstract: false,
         views: {
             'menuBarView': {
-                templateUrl: '/menuBar.tmpl.html',
-                // templateUrl: 'https://github.com/amitlap/cssTest/blob/master/test1.html',
+               // templateUrl: '/menuBar.tmpl.html',
+                 templateUrl: 'https://github.com/amitlap/cssTest/blob/master/clubs-page/menuBar.tmpl.html',
                 controller: 'menuBarCtrl'
             },
             'screenView': {
