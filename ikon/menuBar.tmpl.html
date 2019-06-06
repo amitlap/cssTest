@@ -1,6 +1,0 @@
-<li style="list-style-type: none;" ng-repeat='category in categories'
-    ng-class='{"active":isCurrentCategory(category),"mdl-layout--small-screen-only":equal(category.id,0)}'>
-    <a ng-click='setCurrentCategory(category); goToElement(category.url)' class='dropdown-item' >{{ category.name}}</a>
- </li>
-<li style="list-style-type: none; margin-top: 3px;"><a style="color: red;" ng-class='{"mdl-layout--small-screen-only" : true }' >Notifications: {{profile.notifications}}</a></li>
-<li style="list-style-type: none; margin-top: 4px;"><a style="color: red;" ng-class='{"mdl-layout--small-screen-only" : true }' >Balance: {{profile.balance}}</a></li>
