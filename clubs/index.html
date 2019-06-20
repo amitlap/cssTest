@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clubs material</title>
-    <link rel="stylesheet" href="https://github.com/amitlap/cssTest/edit/master/clubs/clubs/PageAddType text/css.css" />
+    <link Add rel="stylesheet" href="clubsPage.css" />
     <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.19/angular-material.min.css"/>
     <!-------------material design links ---------------------------------------------------->
@@ -82,9 +82,9 @@
         <md-content style="background: none;" flex id="content" class="lightgreen" flex>
             <div class="pt-3 mx-auto mdl-grid choose-club-carousel" >
                 <a class="mdl-layout--large-screen-only" ng-click="sc.moveInSlider('left', 'joinClub')">
-                    <i class="prev material-icons">
-                        keyboard_arrow_left
-                    </i>
+                    <object  class=" prev" data="images/slider-chevron-previous.svg" type="image/svg+xml">
+                        <img src="images/greenDot.png" />
+                    </object>
                 </a>
                 <div class="mdl-cell content">
                     <div>
@@ -105,9 +105,9 @@
                     </ul>
                 </div>
                 <a class="mdl-layout--large-screen-only" ng-click="sc.moveInSlider('right', 'joinClub')">
-                    <i class="next material-icons">
-                        keyboard_arrow_right
-                    </i>
+                    <object class="next" data="images/slider-chevron-next.svg" type="image/svg+xml">
+                        <img src="images/greenDot.png" />
+                    </object>
                 </a>
             </div>
             <div ng-repeat="club in sc.clubs " class="mdl-grid clubs-div">
@@ -185,6 +185,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-aria.min.js"></script>
 <script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
 
-<script src="https://github.com/amitlap/cssTest/edit/master/clubs/js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
