@@ -82,9 +82,9 @@
         <md-content style="background: none;" flex id="content" class="lightgreen" flex>
             <div class="pt-3 mx-auto mdl-grid choose-club-carousel" >
                 <a class="mdl-layout--large-screen-only" ng-click="sc.moveInSlider('left', 'joinClub')">
-                    <object  class=" prev" data="images/slider-chevron-previous.svg" type="image/svg+xml">
-                        <img src="images/greenDot.png" />
-                    </object>
+                    <i class="prev material-icons">
+                        keyboard_arrow_left
+                    </i>
                 </a>
                 <div class="mdl-cell content">
                     <div>
@@ -105,9 +105,9 @@
                     </ul>
                 </div>
                 <a class="mdl-layout--large-screen-only" ng-click="sc.moveInSlider('right', 'joinClub')">
-                    <object class="next" data="images/slider-chevron-next.svg" type="image/svg+xml">
-                        <img src="images/greenDot.png" />
-                    </object>
+                    <i class="next material-icons">
+                        keyboard_arrow_right
+                    </i>
                 </a>
             </div>
             <div ng-repeat="club in sc.clubs " class="mdl-grid clubs-div">
